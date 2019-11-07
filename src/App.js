@@ -1,26 +1,40 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import React from "react";
+import Controls from "./controls/controls";
+import Origins from "./origins/origins";
+import PersonalDecisions from "./personalDecisions/personalDecisions";
+import LifeEvents from "./lifeEvents/lifeEvents";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+	state = {
+		race: "Half-Elf",
+		background: "Acolyte",
+		class: "Barbarian",
+		age: 1,
+		chaMod: 0,
+	};
+
+	changeHandler = (event, control) => {
+		this.setState({ [control]: event.target.value });
+	};
+
+	render() {
+		const values = { ...this.state };
+		return (
+			<div className="App">
+				<Controls values={values} changeHandler={this.changeHandler} />
+				<hr />
+				<Origins race={this.state.race} chaMod={this.state.chaMod} />
+				<hr />
+				<PersonalDecisions
+					class={this.state.class}
+					background={this.state.background}
+				/>
+				<hr />
+				<LifeEvents age={this.state.age} />
+			</div>
+		);
+	}
 }
 
 export default App;
