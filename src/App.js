@@ -27,7 +27,7 @@ class App extends React.Component {
 				<Origins race={this.state.race} chaMod={this.state.chaMod} />
 				<hr />
 				<PersonalDecisions
-					class={this.state.class}
+					characterClass={this.state.class}
 					background={this.state.background}
 				/>
 				<hr />

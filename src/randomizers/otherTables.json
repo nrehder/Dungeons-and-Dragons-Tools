@@ -1,0 +1,83 @@
+{
+	"Alignment": {
+		"1": "Alignment 3",
+		"2": "Alignment 4-5",
+		"3": "Alignment 6-8",
+		"4": "Alignment 9-12",
+		"5": "Alignment 13-15",
+		"6": "Alignment 16-17",
+		"7": "Alignment 18"
+	},
+	"Cause_Of_Death": {
+		"1": "Cause of Death 1",
+		"2": "Cause of Death 2",
+		"3": "Cause of Death 3",
+		"4": "Cause of Death 4",
+		"5": "Cause of Death 5",
+		"6": "Cause of Death 6",
+		"7": "Cause of Death 7",
+		"8": "Cause of Death 8",
+		"9": "Cause of Death 9",
+		"10": "Cause of Death 10",
+		"11": "Cause of Death 11",
+		"12": "Cause of Death 12"
+	},
+	"Class": {
+		"1": "Class 1-7",
+		"2": "Class 8-14",
+		"3": "Class 15-29",
+		"4": "Class 30-36",
+		"5": "Class 37-52",
+		"6": "Class 53-58",
+		"7": "Class 59-64",
+		"8": "Class 65-70",
+		"9": "Class 71-84",
+		"10": "Class 85-89",
+		"11": "Class 90-94",
+		"12": "Class 95-100"
+	},
+	"Occupation": {
+		"1": "Occupation 1-5",
+		"2": "Occupation 6-10",
+		"3": "Occupation 11",
+		"4": "Occupation 12-26",
+		"5": "Occupation 27-31",
+		"6": "Occupation 32-36",
+		"7": "Occupation 37-38",
+		"8": "Occupation 39-43",
+		"9": "Occupation 44-55",
+		"10": "Occupation 56-60",
+		"11": "Occupation 61-75",
+		"12": "Occupation 76-80",
+		"13": "Occupation 81-85",
+		"14": "Occupation 86-90",
+		"15": "Occupation 91-95",
+		"16": "Occupation 96-100"
+	},
+	"Race": {
+		"1": "Race 1-40",
+		"2": "Race 41-50",
+		"3": "Race 51-60",
+		"4": "Race 61-70",
+		"5": "Race 71-75",
+		"6": "Race 76-80",
+		"7": "Race 81-85",
+		"8": "Race 86-90",
+		"9": "Race 91-95",
+		"10": "Race 96-100"
+	},
+	"Relationship": {
+		"1": "Relationship 3-4",
+		"2": "Relationship 5-10",
+		"3": "Relationship 11-12"
+	},
+	"Status": {
+		"1": "Status 3",
+		"2": "Status 4-5",
+		"3": "Status 6-8",
+		"4": "Status 9-12",
+		"5": "Status 13-15",
+		"6": "Status 16-17",
+		"7": "Status 18"
+	}
+}

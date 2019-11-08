@@ -1,36 +1,33 @@
 import React from "react";
 import rollDice from "../../randomizers/diceRoller";
 import ChildhoodHome from "./childhoodHome";
+import jsonData from "../origins.json";
 
 const FamilyLifestyle = () => {
 	const roll = rollDice(3, 6);
-	const result = { text: "", mod: 0 };
+	let mod;
 	if (roll === 18) {
-		result.text = "Aristoctratic (+40)";
-		result.mod = 40;
+		mod = 40;
 	} else if (roll > 15) {
-		result.text = "Wealthy (+20)";
-		result.mod = 20;
+		mod = 20;
 	} else if (roll > 12) {
-		result.text = "Comfortable (+10)";
-		result.mod = 10;
+		mod = 10;
 	} else if (roll > 8) {
-		result.text = "Modest (+0)";
-		result.mod = 0;
+		mod = 0;
 	} else if (roll > 5) {
-		result.text = "Poor (-10)";
-		result.mod = -10;
+		mod = -10;
 	} else if (roll > 3) {
-		result.text = "Squalid (-20)";
-		result.mod = -20;
+		mod = -20;
 	} else {
-		result.text = "Wretched (-40)";
-		result.mod = -40;
+		mod = -40;
 	}
+
 	return [
-		<h3 key="family_lifestyle">Family Lifestyle</h3>,
-		<p key="family_lifestyle_text">{result.text}</p>,
-		<ChildhoodHome key="childhood_home" mod={result.mod} />,
+		<h3 key="family_lifestyle">Family Lifestyle:</h3>,
+		<p key="family_lifestyle_text">
+			{roll}: {jsonData["Family_Lifestyle"][mod]}
+		</p>,
+		<ChildhoodHome key="childhood_home" mod={mod} />,
 	];
 };
 

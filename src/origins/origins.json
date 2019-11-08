@@ -1,0 +1,116 @@
+{
+	"Parents": {
+		"1": "Parents 01-95",
+		"2": "Parents 96-00"
+	},
+	"Half-Elf": {
+		"1": "Half-Elf Parents 1-5",
+		"2": "Half-Elf Parents 1-5",
+		"3": "Half-Elf Parents 1-5",
+		"4": "Half-Elf Parents 1-5",
+		"5": "Half-Elf Parents 1-5",
+		"6": "Half-Elf Parents 6",
+		"7": "Half-Elf Parents 7",
+		"8": "Half-Elf Parents 8"
+	},
+	"Half-Orc": {
+		"1": "Half-Orc Parents 1-3",
+		"2": "Half-Orc Parents 1-3",
+		"3": "Half-Orc Parents 1-3",
+		"4": "Half-Orc Parents 4-5",
+		"5": "Half-Orc Parents 4-5",
+		"6": "Half-Orc Parents 6-7",
+		"7": "Half-Orc Parents 6-7",
+		"8": "Half-Orc Parents 8"
+	},
+	"Tiefling": {
+		"1": "Tiefling Parents 1-4",
+		"2": "Tiefling Parents 1-4",
+		"3": "Tiefling Parents 1-4",
+		"4": "Tiefling Parents 1-4",
+		"5": "Tiefling Parents 5-6",
+		"6": "Tiefling Parents 5-6",
+		"7": "Tiefling Parents 7",
+		"8": "Tiefling Parents 8"
+	},
+	"Birthplace": {
+		"1": "Birthplace 01-50",
+		"2": "Birthplace 51-55",
+		"3": "Birthplace 56-63",
+		"4": "Birthplace 64-65",
+		"5": "Birthplace 66-68",
+		"6": "Birthplace 69-70",
+		"7": "Birthplace 71-72",
+		"8": "Birthplace 73-74",
+		"9": "Birthplace 75-77",
+		"10": "Birthplace 78",
+		"11": "Birthplace 79-80",
+		"12": "Birthplace 81-82",
+		"13": "Birthplace 83-84",
+		"14": "Birthplace 85",
+		"15": "Birthplace 86-88",
+		"16": "Birthplace 89-91",
+		"17": "Birthplace 92-93",
+		"18": "Birthplace 94-95",
+		"19": "Birthplace 96",
+		"20": "Birthplace 97",
+		"21": "Birthplace 98",
+		"22": "Birthplace 99",
+		"23": "Birthplace 00"
+	},
+	"Siblings": {
+		"1": "Siblings 2 or lower",
+		"2": "Siblings 3-4",
+		"3": "Siblings 5-6",
+		"4": "Siblings 7-8",
+		"5": "Siblings 9-10"
+	},
+	"Family": {
+		"1": "Family 01",
+		"2": "Family 02",
+		"3": "Family 03",
+		"4": "Family 04-05",
+		"5": "Family 06-07",
+		"6": "Family 08-15",
+		"7": "Family 16-25",
+		"8": "Family 26-35",
+		"9": "Family 36-55",
+		"10": "Family 56-75",
+		"11": "Family 76-00"
+	},
+	"Absent_Parent": {
+		"1": "Absent Parent 1",
+		"2": "Absent Parent 2",
+		"3": "Absent Parent 3",
+		"4": "Absent Parent 4"
+	},
+	"Family_Lifestyle": {
+		"-40": "Family Lifestyle 3",
+		"-20": "Family Lifestyle 4-5",
+		"-10": "Family Lifestyle 6-8",
+		"0": "Family Lifestyle 9-12",
+		"10": "Family Lifestyle 13-15",
+		"20": "Family Lifestyle 16-17",
+		"40": "Family Lifestyle 18"
+	},
+	"Childhood_Home": {
+		"1": "Childhood Home 0 or lower",
+		"2": "Childhood Home 1-20",
+		"3": "Childhood Home 21-30",
+		"4": "Childhood Home 31-40",
+		"5": "Childhood Home 41-50",
+		"6": "Childhood Home 51-70",
+		"7": "Childhood Home 71-90",
+		"8": "Childhood Home 91-110",
+		"9": "Childhood Home 111 or higher"
+	},
+	"Childhood_Memories": {
+		"1": "Childhood Memories 3 or lower",
+		"2": "Childhood Memories 4-5",
+		"3": "Childhood Memories 6-8",
+		"4": "Childhood Memories 9-12",
+		"5": "Childhood Memories 13-15",
+		"6": "Childhood Memories 16-17",
+		"7": "Childhood Memories 18 or higher"
+	}
+}

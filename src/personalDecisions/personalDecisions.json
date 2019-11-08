@@ -1,0 +1,206 @@
+{
+	"Character_Background": {
+		"Acolyte": {
+			"1": "Acolyte 1",
+			"2": "Acolyte 2",
+			"3": "Acolyte 3",
+			"4": "Acolyte 4",
+			"5": "Acolyte 5",
+			"6": "Acolyte 6"
+		},
+		"Charlatan": {
+			"1": "Charlatan 1",
+			"2": "Charlatan 2",
+			"3": "Charlatan 3",
+			"4": "Charlatan 4",
+			"5": "Charlatan 5",
+			"6": "Charlatan 6"
+		},
+		"Criminal": {
+			"1": "Criminal 1",
+			"2": "Criminal 2",
+			"3": "Criminal 3",
+			"4": "Criminal 4",
+			"5": "Criminal 5",
+			"6": "Criminal 6"
+		},
+		"Entertainer": {
+			"1": "Entertainer 1",
+			"2": "Entertainer 2",
+			"3": "Entertainer 3",
+			"4": "Entertainer 4",
+			"5": "Entertainer 5",
+			"6": "Entertainer 6"
+		},
+		"Folk Hero": {
+			"1": "Folk Hero 1",
+			"2": "Folk Hero 2",
+			"3": "Folk Hero 3",
+			"4": "Folk Hero 4",
+			"5": "Folk Hero 5",
+			"6": "Folk Hero 6"
+		},
+		"Guild Artisan": {
+			"1": "Guild Artisan 1",
+			"2": "Guild Artisan 2",
+			"3": "Guild Artisan 3",
+			"4": "Guild Artisan 4",
+			"5": "Guild Artisan 5",
+			"6": "Guild Artisan 6"
+		},
+		"Hermit": {
+			"1": "Hermit 1",
+			"2": "Hermit 2",
+			"3": "Hermit 3",
+			"4": "Hermit 4",
+			"5": "Hermit 5",
+			"6": "Hermit 6"
+		},
+		"Noble": {
+			"1": "Noble 1",
+			"2": "Noble 2",
+			"3": "Noble 3",
+			"4": "Noble 4",
+			"5": "Noble 5",
+			"6": "Noble 6"
+		},
+		"Outlander": {
+			"1": "Outlander 1",
+			"2": "Outlander 2",
+			"3": "Outlander 3",
+			"4": "Outlander 4",
+			"5": "Outlander 5",
+			"6": "Outlander 6"
+		},
+		"Sage": {
+			"1": "Sage 1",
+			"2": "Sage 2",
+			"3": "Sage 3",
+			"4": "Sage 4",
+			"5": "Sage 5",
+			"6": "Sage 6"
+		},
+		"Sailor": {
+			"1": "Sailor 1",
+			"2": "Sailor 2",
+			"3": "Sailor 3",
+			"4": "Sailor 4",
+			"5": "Sailor 5",
+			"6": "Sailor 6"
+		},
+		"Soldier": {
+			"1": "Soldier 1",
+			"2": "Soldier 2",
+			"3": "Soldier 3",
+			"4": "Soldier 4",
+			"5": "Soldier 5",
+			"6": "Soldier 6"
+		},
+		"Urchin": {
+			"1": "Urchin 1",
+			"2": "Urchin 2",
+			"3": "Urchin 3",
+			"4": "Urchin 4",
+			"5": "Urchin 5",
+			"6": "Urchin 6"
+		}
+	},
+	"Character_Class": {
+		"Barbarian": {
+			"1": "Barbarian 1",
+			"2": "Barbarian 2",
+			"3": "Barbarian 3",
+			"4": "Barbarian 4",
+			"5": "Barbarian 5",
+			"6": "Barbarian 6"
+		},
+		"Bard": {
+			"1": "Bard 1",
+			"2": "Bard 2",
+			"3": "Bard 3",
+			"4": "Bard 4",
+			"5": "Bard 5",
+			"6": "Bard 6"
+		},
+		"Cleric": {
+			"1": "Cleric 1",
+			"2": "Cleric 2",
+			"3": "Cleric 3",
+			"4": "Cleric 4",
+			"5": "Cleric 5",
+			"6": "Cleric 6"
+		},
+		"Druid": {
+			"1": "Druid 1",
+			"2": "Druid 2",
+			"3": "Druid 3",
+			"4": "Druid 4",
+			"5": "Druid 5",
+			"6": "Druid 6"
+		},
+		"Fighter": {
+			"1": "Fighter 1",
+			"2": "Fighter 2",
+			"3": "Fighter 3",
+			"4": "Fighter 4",
+			"5": "Fighter 5",
+			"6": "Fighter 6"
+		},
+		"Monk": {
+			"1": "Monk 1",
+			"2": "Monk 2",
+			"3": "Monk 3",
+			"4": "Monk 4",
+			"5": "Monk 5",
+			"6": "Monk 6"
+		},
+		"Paladin": {
+			"1": "Paladin 1",
+			"2": "Paladin 2",
+			"3": "Paladin 3",
+			"4": "Paladin 4",
+			"5": "Paladin 5",
+			"6": "Paladin 6"
+		},
+		"Ranger": {
+			"1": "Ranger 1",
+			"2": "Ranger 2",
+			"3": "Ranger 3",
+			"4": "Ranger 4",
+			"5": "Ranger 5",
+			"6": "Ranger 6"
+		},
+		"Rogue": {
+			"1": "Rogue 1",
+			"2": "Rogue 2",
+			"3": "Rogue 3",
+			"4": "Rogue 4",
+			"5": "Rogue 5",
+			"6": "Rogue 6"
+		},
+		"Sorcerer": {
+			"1": "Sorcerer 1",
+			"2": "Sorcerer 2",
+			"3": "Sorcerer 3",
+			"4": "Sorcerer 4",
+			"5": "Sorcerer 5",
+			"6": "Sorcerer 6"
+		},
+		"Warlock": {
+			"1": "Warlock 1",
+			"2": "Warlock 2",
+			"3": "Warlock 3",
+			"4": "Warlock 4",
+			"5": "Warlock 5",
+			"6": "Warlock 6"
+		},
+		"Wizard": {
+			"1": "Wizard 1",
+			"2": "Wizard 2",
+			"3": "Wizard 3",
+			"4": "Wizard 4",
+			"5": "Wizard 5",
+			"6": "Wizard 6"
+		}
+	}
+}

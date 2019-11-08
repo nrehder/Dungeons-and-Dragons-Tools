@@ -1,65 +1,65 @@
 import React from "react";
 import rollDice from "../randomizers/diceRoller";
+import jsonData from "./origins.json";
 
 const Birthplace = () => {
 	let roll = rollDice(1, 100);
 	let result;
-	if (roll === 100) {
-		result = <p>On an Outer Plane of your choice.</p>;
-	} else if (roll === 99) {
-		result = <p>On an Inner Plane of your choice.</p>;
-	} else if (roll === 98) {
-		result = <p>On the Astral Plane or the Etheral Plane.</p>;
-	} else if (roll === 97) {
-		result = <p>In the Shadowfell.</p>;
-	} else if (roll === 96) {
-		result = <p>In the Feywild.</p>;
-	} else if (roll === 95 || roll === 94) {
-		result = <p>In a sage's laboratory.</p>;
-	} else if (roll === 93 || roll === 92) {
-		result = (
-			<p>In a prison or in the headquarters of a secret organization.</p>
-		);
-	} else if (roll === 91 || roll === 90 || roll === 89) {
-		result = <p>On board a boat or a ship.</p>;
-	} else if (roll === 88 || roll === 87 || roll === 86) {
-		result = <p>Among people of a different race.</p>;
-	} else if (roll === 85) {
-		result = <p>Sewer or rubbish heap.</p>;
-	} else if (roll === 84 || roll === 83) {
-		result = <p>Castle, keep, tower or palace.</p>;
-	} else if (roll === 82 || roll === 81) {
-		result = <p>Brothel, tavern, or inn.</p>;
-	} else if (roll === 80 || roll === 79) {
-		result = <p>Alley or street.</p>;
-	} else if (roll === 78) {
-		result = <p>Battlefield.</p>;
-	} else if (roll === 77 || roll === 76 || roll === 75) {
-		result = <p>Temple.</p>;
-	} else if (roll === 74 || roll === 73) {
-		result = <p>Forest.</p>;
-	} else if (roll === 72 || roll === 71) {
-		result = <p>Field.</p>;
-	} else if (roll === 70 || roll === 69) {
-		result = <p>Cave.</p>;
-	} else if (roll === 68 || roll === 67 || roll === 66) {
-		result = <p>Barn, shed, or other outbuilding.</p>;
-	} else if (roll === 65 || roll === 64) {
-		result = <p>Carriage, cart, or wagon.</p>;
-	} else if (roll > 55) {
-		result = <p>Home of a healer or midwife.</p>;
-	} else if (roll > 50) {
-		result = <p>Home of a family friend.</p>;
+
+	if (roll < 51) {
+		result = 1;
+	} else if (roll < 56) {
+		result = 2;
+	} else if (roll < 64) {
+		result = 3;
+	} else if (roll < 66) {
+		result = 4;
+	} else if (roll < 69) {
+		result = 5;
+	} else if (roll < 71) {
+		result = 6;
+	} else if (roll < 73) {
+		result = 7;
+	} else if (roll < 75) {
+		result = 8;
+	} else if (roll < 78) {
+		result = 9;
+	} else if (roll < 79) {
+		result = 10;
+	} else if (roll < 81) {
+		result = 11;
+	} else if (roll < 83) {
+		result = 12;
+	} else if (roll < 85) {
+		result = 13;
+	} else if (roll < 86) {
+		result = 14;
+	} else if (roll < 89) {
+		result = 15;
+	} else if (roll < 92) {
+		result = 16;
+	} else if (roll < 94) {
+		result = 17;
+	} else if (roll < 96) {
+		result = 18;
+	} else if (roll < 97) {
+		result = 19;
+	} else if (roll < 98) {
+		result = 20;
+	} else if (roll < 99) {
+		result = 21;
+	} else if (roll < 100) {
+		result = 22;
 	} else {
-		result = <p>Home.</p>;
+		result = 23;
 	}
 
-	return (
-		<div>
-			<h3>Birthplace:</h3>
-			{result}
-		</div>
-	);
+	return [
+		<h3 key="birthplace_title">Birthplace:</h3>,
+		<p key="birthplace_result">
+			{roll}: {jsonData["Birthplace"][result]}
+		</p>,
+	];
 };
 
 export default Birthplace;

@@ -1,17 +1,16 @@
 import React from "react";
 import rollDice from "../randomizers/diceRoller";
+import jsonData from "./origins.json";
 
 const Parents = () => {
-	return (
-		<div>
-			<h3>Parents:</h3>
-			<p>
-				{rollDice(1, 100) < 96
-					? "You know who your parents are or were."
-					: "You do not know who your parents were."}
-			</p>
-		</div>
-	);
+	const roll = rollDice(1, 100);
+	return [
+		<h3 key="parents_title">Parents:</h3>,
+		<p key="parents_result">
+			{roll}:{" "}
+			{roll < 96 ? jsonData["Parents"][1] : jsonData["Parents"][2]}
+		</p>,
+	];
 };
 
 export default Parents;

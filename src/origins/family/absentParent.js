@@ -1,36 +1,25 @@
 import React from "react";
 import rollDice from "../../randomizers/diceRoller";
-import causeOfDeath from "../../randomizers/causeOfDeath";
+import jsonData from "../origins.json";
+import deathData from "../../randomizers/otherTables.json";
 
 const AbsentParent = () => {
-	const absentParent = [<h3 key="absent_title">Absent Parent:</h3>];
-	switch (rollDice(1, 4)) {
-		case 1:
-			absentParent.push(<p key="absent_death">Your parent died!</p>);
-			absentParent.push(
-				<h5 key="absent_cause_title">Cause of Death:</h5>
-			);
-			absentParent.push(<p key="absent_case">{causeOfDeath()}</p>);
-			break;
-		case 2:
-			absentParent.push(
-				<p key="absent_imprisoned">
-					Your parent was imprisoned, enslaved or otherwise taken
-					away.
-				</p>
-			);
-			break;
-		case 3:
-			absentParent.push(
-				<p key="absent_abandoned">Your parent abandoned you.</p>
-			);
-			break;
-		default:
-			absentParent.push(
-				<p key="absent_unknown">
-					Your parent disappeared to an unknown fate.
-				</p>
-			);
+	const roll = rollDice(1, 4);
+	const absentParent = [
+		<h3 key="absent_title">Absent Parent:</h3>,
+		<p key="absent_reason">
+			{roll}: {jsonData["Absent_Parent"][roll]}
+		</p>,
+	];
+
+	if (roll === 1) {
+		const deathRoll = rollDice(1, 12);
+		absentParent.push(<h4 key="absent_cause_title">Cause of Death:</h4>);
+		absentParent.push(
+			<p key="absent_case">
+				{deathRoll}: {deathData["Cause_Of_Death"][deathRoll]}
+			</p>
+		);
 	}
 	return absentParent;
 };

@@ -1,55 +1,36 @@
 import React from "react";
 import rollDice from "../../randomizers/diceRoller";
+import jsonData from "../origins.json";
 
 const ChildhoodHome = props => {
 	const roll = rollDice(1, 100) + props.mod;
-	const childhoodHomeResults = [
-		<h3 key="childhood_home_title">Childhood Home</h3>,
-	];
-
+	let result;
 	if (roll > 110) {
-		childhoodHomeResults.push(
-			<p key="childhood_home_result">Palace or castle</p>
-		);
+		result = 9;
 	} else if (roll > 90) {
-		childhoodHomeResults.push(<p key="childhood_home_result">Mansion</p>);
+		result = 8;
 	} else if (roll > 70) {
-		childhoodHomeResults.push(
-			<p key="childhood_home_result">Large house</p>
-		);
+		result = 7;
 	} else if (roll > 50) {
-		childhoodHomeResults.push(
-			<p key="childhood_home_result">Small house</p>
-		);
+		result = 6;
 	} else if (roll > 40) {
-		childhoodHomeResults.push(
-			<p key="childhood_home_result">
-				Apartment in a rundown neighborhood
-			</p>
-		);
+		result = 5;
 	} else if (roll > 30) {
-		childhoodHomeResults.push(
-			<p key="childhood_home_result">
-				Encampment or village in the wilderness
-			</p>
-		);
+		result = 4;
 	} else if (roll > 20) {
-		childhoodHomeResults.push(
-			<p key="childhood_home_result">
-				No permanent residence; you moved around a lot
-			</p>
-		);
+		result = 3;
 	} else if (roll > 0) {
-		childhoodHomeResults.push(
-			<p key="childhood_home_result">Rundown shack</p>
-		);
+		result = 2;
 	} else {
-		childhoodHomeResults.push(
-			<p key="childhood_home_result">On the streets</p>
-		);
+		result = 1;
 	}
 
-	return childhoodHomeResults;
+	return [
+		<h3 key="childhood_home_title">Childhood Home:</h3>,
+		<p key="childhood_home_result">
+			{roll}: {jsonData["Childhood_Home"][result]}
+		</p>,
+	];
 };
 
 export default ChildhoodHome;
