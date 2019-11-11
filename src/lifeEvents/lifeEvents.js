@@ -1,6 +1,15 @@
 import React from "react";
 import rollDice from "../randomizers/diceRoller";
 import LifeEvent from "./lifeEvent";
+import Adventures from "./secondaryTables/adventures";
+import ArcaneMatters from "./secondaryTables/arcaneMatters";
+import Boons from "./secondaryTables/boons";
+import Crime from "./secondaryTables/crime";
+import WeirdStuff from "./secondaryTables/weirdStuff";
+import War from "./secondaryTables/war";
+import Tragedies from "./secondaryTables/tragedies";
+import Punishment from "./secondaryTables/punishment";
+import SupernaturalEvents from "./secondaryTables/supernaturalEvents";
 
 const eventsDice = age => {
 	if (age > 60) {
@@ -21,8 +30,6 @@ const eventsDice = age => {
 const LifeEvents = props => {
 	const diceMax = eventsDice(props.age);
 	const numEvents = rollDice(1, diceMax);
-	console.log(diceMax);
-	console.log(numEvents);
 
 	const eventsResults = [];
 
@@ -33,6 +40,15 @@ const LifeEvents = props => {
 		<div>
 			<h1>Life Events</h1>
 			{eventsResults}
+			<Adventures />
+			<ArcaneMatters />
+			<Boons />
+			<Crime />
+			<Punishment />
+			<SupernaturalEvents />
+			<Tragedies />
+			<War />
+			<WeirdStuff />
 		</div>
 	);
 };

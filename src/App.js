@@ -4,6 +4,7 @@ import Controls from "./controls/controls";
 import Origins from "./origins/origins";
 import PersonalDecisions from "./personalDecisions/personalDecisions";
 import LifeEvents from "./lifeEvents/lifeEvents";
+import SupplementalTables from "./supplementalTables/supplementalTables";
 
 class App extends React.Component {
 	state = {
@@ -32,6 +33,8 @@ class App extends React.Component {
 				/>
 				<hr />
 				<LifeEvents age={this.state.age} />
+				<hr />
+				<SupplementalTables />
 			</div>
 		);
 	}
