@@ -1,5 +1,6 @@
 import React from "react";
 import Control from "./control";
+import "./control.css";
 
 const Controls = props => {
 	const raceList = ["Half-Elf", "Half-Orc", "Tiefling", "Other"];
@@ -34,7 +35,7 @@ const Controls = props => {
 	];
 
 	return (
-		<div>
+		<div className="controls">
 			<h3 className="control-label">Race:</h3>
 			<Control
 				control="race"

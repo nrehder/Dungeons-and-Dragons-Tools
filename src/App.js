@@ -1,41 +1,48 @@
 import "./App.css";
 import React from "react";
-import Controls from "./controls/controls";
-import Origins from "./origins/origins";
-import PersonalDecisions from "./personalDecisions/personalDecisions";
-import LifeEvents from "./lifeEvents/lifeEvents";
-import SupplementalTables from "./supplementalTables/supplementalTables";
+import { BrowserRouter, Route, Switch, NavLink } from "react-router-dom";
+
+import BackgroundRandomizer from "./backgroundRandomizer/backgroundRandomizer";
+import Home from "./home/home";
+import HeightWeightRandomizer from "./heightWeightRandomizer/heightWeightRandomizer";
 
 class App extends React.Component {
-	state = {
-		race: "Half-Elf",
-		background: "Acolyte",
-		class: "Barbarian",
-		age: 1,
-		chaMod: 0,
-	};
-
-	changeHandler = (event, control) => {
-		this.setState({ [control]: event.target.value });
-	};
-
 	render() {
-		const values = { ...this.state };
 		return (
-			<div className="App">
-				<Controls values={values} changeHandler={this.changeHandler} />
-				<hr />
-				<Origins race={this.state.race} chaMod={this.state.chaMod} />
-				<hr />
-				<PersonalDecisions
-					characterClass={this.state.class}
-					background={this.state.background}
-				/>
-				<hr />
-				<LifeEvents age={this.state.age} />
-				<hr />
-				<SupplementalTables />
-			</div>
+			<BrowserRouter>
+				<header className="App-header">
+					<ul>
+						<li>
+							<NavLink to="/" exact>
+								Home
+							</NavLink>
+						</li>
+						<li>
+							<NavLink to="/background" exact>
+								Background Randomizer
+							</NavLink>
+						</li>
+						<li>
+							<NavLink to="/height-and-weight" exact>
+								Height & Weight
+							</NavLink>
+						</li>
+					</ul>
+				</header>
+				<div className="App-content">
+					<Switch>
+						<Route path="/" exact component={Home} />
+						<Route
+							path="/background"
+							component={BackgroundRandomizer}
+						/>
+						<Route
+							path="/height-and-weight"
+							component={HeightWeightRandomizer}
+						/>
+					</Switch>
+				</div>
+			</BrowserRouter>
 		);
 	}
 }

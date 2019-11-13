@@ -1,0 +1,15 @@
+.background-app {
+	text-align: center;
+	width: 100%;
+	padding-top: 10px;
+	background-color: lightblue;
+}
+.background-app .controls {
+	width: 80%;
+	margin: auto;
+}
+@media (max-width: 600px) {
+	.background-app .controls {
+		width: 90%;
+	}
+}
