@@ -1,5 +1,5 @@
 import React from "react";
-import rollDice from "../../randomizers/diceRoller";
+import rollDice from "../../../diceRoller";
 import jsonData from "../lifeEvents.json";
 
 class Boons extends React.Component {

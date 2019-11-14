@@ -1,5 +1,5 @@
 import React from "react";
-import rollDice from "../randomizers/diceRoller";
+import rollDice from "../../diceRoller";
 import LifeEvent from "./lifeEvent";
 import Adventures from "./secondaryTables/adventures";
 import ArcaneMatters from "./secondaryTables/arcaneMatters";

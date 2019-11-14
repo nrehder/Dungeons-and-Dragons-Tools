@@ -1,5 +1,5 @@
 import React from "react";
-import rollDice from "../randomizers/diceRoller";
+import rollDice from "../../diceRoller";
 import jsonData from "./supplementalTables.json";
 
 class Relationship extends React.Component {

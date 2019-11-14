@@ -1,5 +1,5 @@
 import React from "react";
-import rollDice from "../../randomizers/diceRoller";
+import rollDice from "../../../diceRoller";
 import jsonData from "../origins.json";
 
 const ChildhoodMemories = props => {

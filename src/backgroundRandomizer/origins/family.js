@@ -1,5 +1,5 @@
 import React from "react";
-import rollDice from "../randomizers/diceRoller";
+import rollDice from "../../diceRoller";
 import AbsentParent from "./family/absentParent";
 import jsonData from "./origins.json";
 

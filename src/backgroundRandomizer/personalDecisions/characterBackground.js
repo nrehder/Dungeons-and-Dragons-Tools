@@ -1,5 +1,5 @@
 import React from "react";
-import rollDice from "../randomizers/diceRoller";
+import rollDice from "../../diceRoller";
 import jsonData from "./personalDecisions.json";
 
 const CharacterBackground = props => {
