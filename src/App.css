@@ -4,7 +4,7 @@
 	left: 0;
 	background-color: rgb(55, 71, 79);
 	width: 100%;
-	height: 64px;
+	height: 58px;
 	box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
 	z-index: 50;
 }
@@ -33,7 +33,12 @@
 
 .App-content {
 	position: absolute;
-	top: 64px;
-	height: calc(100vh - 64px);
+	top: 58px;
+	min-height: calc(100vh - 58px);
 	width: 100%;
+	padding: 20px;
+	box-sizing: border-box;
+	background-color: #404040;
+	color: #dfdfdf;
+	text-align: center;
 }

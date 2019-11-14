@@ -1,13 +1,5 @@
 .homepage {
-	text-align: center;
 	width: 100%;
-	margin: auto;
-	padding: 10px 20px;
-	overflow: auto;
-	background-color: #404040;
-	color: #dfdfdf;
-	height: 100%;
-	box-sizing: border-box;
 }
 
 @media (max-width: 600px) {

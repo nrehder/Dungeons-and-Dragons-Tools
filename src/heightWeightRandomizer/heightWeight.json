@@ -1,0 +1,98 @@
+{
+	"Human": {
+		"baseHeight": 56,
+		"heightNumDice": 2,
+		"heightMaxDice": 10,
+		"baseWeight": 110,
+		"weightNumDice": 2,
+		"weightMaxDice": 4
+	},
+	"Dwarf, Hill": {
+		"baseHeight": 44,
+		"heightNumDice": 2,
+		"heightMaxDice": 4,
+		"baseWeight": 115,
+		"weightNumDice": 2,
+		"weightMaxDice": 6
+	},
+	"Dwarf, Mountain": {
+		"baseHeight": 48,
+		"heightNumDice": 2,
+		"heightMaxDice": 4,
+		"baseWeight": 130,
+		"weightNumDice": 2,
+		"weightMaxDice": 6
+	},
+	"Elf, High": {
+		"baseHeight": 54,
+		"heightNumDice": 2,
+		"heightMaxDice": 10,
+		"baseWeight": 90,
+		"weightNumDice": 1,
+		"weightMaxDice": 4
+	},
+	"Elf, Wood": {
+		"baseHeight": 54,
+		"heightNumDice": 2,
+		"heightMaxDice": 10,
+		"baseWeight": 100,
+		"weightNumDice": 1,
+		"weightMaxDice": 4
+	},
+	"Elf, Drow": {
+		"baseHeight": 53,
+		"heightNumDice": 2,
+		"heightMaxDice": 6,
+		"baseWeight": 75,
+		"weightNumDice": 1,
+		"weightMaxDice": 6
+	},
+	"Halfling": {
+		"baseHeight": 31,
+		"heightNumDice": 2,
+		"heightMaxDice": 4,
+		"baseWeight": 35,
+		"weightNumDice": 1,
+		"weightMaxDice": 1
+	},
+	"Dragonborn": {
+		"baseHeight": 66,
+		"heightNumDice": 2,
+		"heightMaxDice": 8,
+		"baseWeight": 175,
+		"weightNumDice": 2,
+		"weightMaxDice": 6
+	},
+	"Gnome": {
+		"baseHeight": 35,
+		"heightNumDice": 2,
+		"heightMaxDice": 4,
+		"baseWeight": 35,
+		"weightNumDice": 1,
+		"weightMaxDice": 1
+	},
+	"Half-Elf": {
+		"baseHeight": 57,
+		"heightNumDice": 2,
+		"heightMaxDice": 8,
+		"baseWeight": 110,
+		"weightNumDice": 2,
+		"weightMaxDice": 4
+	},
+	"Half-Orc": {
+		"baseHeight": 58,
+		"heightNumDice": 2,
+		"heightMaxDice": 10,
+		"baseWeight": 140,
+		"weightNumDice": 2,
+		"weightMaxDice": 6
+	},
+	"Tiefling": {
+		"baseHeight": 57,
+		"heightNumDice": 2,
+		"heightMaxDice": 8,
+		"baseWeight": 110,
+		"weightNumDice": 2,
+		"weightMaxDice": 4
+	}
+}
