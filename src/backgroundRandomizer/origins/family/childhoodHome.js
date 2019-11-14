@@ -1,36 +1,32 @@
 import React from "react";
 import rollDice from "../../../diceRoller";
 import jsonData from "../origins.json";
+import TableRow from "../../tableLayout/tableRow";
 
 const ChildhoodHome = props => {
 	const roll = rollDice(1, 100) + props.mod;
 	let result;
 	if (roll > 110) {
-		result = 9;
+		result = jsonData["Childhood_Home"][9];
 	} else if (roll > 90) {
-		result = 8;
+		result = jsonData["Childhood_Home"][8];
 	} else if (roll > 70) {
-		result = 7;
+		result = jsonData["Childhood_Home"][7];
 	} else if (roll > 50) {
-		result = 6;
+		result = jsonData["Childhood_Home"][6];
 	} else if (roll > 40) {
-		result = 5;
+		result = jsonData["Childhood_Home"][5];
 	} else if (roll > 30) {
-		result = 4;
+		result = jsonData["Childhood_Home"][4];
 	} else if (roll > 20) {
-		result = 3;
+		result = jsonData["Childhood_Home"][3];
 	} else if (roll > 0) {
-		result = 2;
+		result = jsonData["Childhood_Home"][2];
 	} else {
-		result = 1;
+		result = jsonData["Childhood_Home"][1];
 	}
 
-	return [
-		<h3 key="childhood_home_title">Childhood Home:</h3>,
-		<p key="childhood_home_result">
-			{roll}: {jsonData["Childhood_Home"][result]}
-		</p>,
-	];
+	return <TableRow category="Childhood Home" roll={roll} result={result} />;
 };
 
 export default ChildhoodHome;

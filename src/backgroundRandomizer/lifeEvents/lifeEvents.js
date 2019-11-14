@@ -10,6 +10,7 @@ import War from "./secondaryTables/war";
 import Tragedies from "./secondaryTables/tragedies";
 import Punishment from "./secondaryTables/punishment";
 import SupernaturalEvents from "./secondaryTables/supernaturalEvents";
+import TableHeader from "../tableLayout/tableHeader";
 
 const eventsDice = age => {
 	if (age > 60) {
@@ -28,17 +29,17 @@ const eventsDice = age => {
 };
 
 const LifeEvents = props => {
-	const diceMax = eventsDice(props.age);
-	const numEvents = rollDice(1, diceMax);
+	const numEvents = rollDice(1, eventsDice(props.age));
 
 	const eventsResults = [];
 
 	for (let i = 0; i < numEvents; i++) {
-		eventsResults.push(<LifeEvent key={i} />);
+		eventsResults.push(<LifeEvent key={i} index={i} />);
 	}
 	return (
-		<div>
+		<div className="w-80 table-margin">
 			<h1>Life Events</h1>
+			<TableHeader />
 			{eventsResults}
 			<Adventures />
 			<ArcaneMatters />

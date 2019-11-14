@@ -1,16 +1,18 @@
 import React from "react";
 import rollDice from "../../diceRoller";
 import jsonData from "./personalDecisions.json";
+import TableRow from "../tableLayout/tableRow";
 
 const CharacterBackground = props => {
 	const roll = rollDice(1, 6);
 
-	return [
-		<h3 key="character_background_title">Character Background:</h3>,
-		<p key="character_background_result">
-			{roll}: {jsonData["Character_Background"][props.background][roll]}
-		</p>,
-	];
+	return (
+		<TableRow
+			category="Character Background"
+			roll={roll}
+			result={jsonData["Character_Background"][props.background][roll]}
+		/>
+	);
 };
 
 export default CharacterBackground;

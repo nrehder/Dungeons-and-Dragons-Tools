@@ -1,15 +1,17 @@
 import React from "react";
 import rollDice from "../../diceRoller";
 import jsonData from "./origins.json";
+import TableRow from "../tableLayout/tableRow";
 
 const Sibling = () => {
 	let roll = rollDice(1, 5);
-	return [
-		<h3 key="sibling_title">Siblings:</h3>,
-		<p key="sibling_result">
-			{roll}: {jsonData["Siblings"][roll]}
-		</p>,
-	];
+	return (
+		<TableRow
+			category="Siblings"
+			roll={roll}
+			result={jsonData["Siblings"][roll]}
+		/>
+	);
 };
 
 export default Sibling;

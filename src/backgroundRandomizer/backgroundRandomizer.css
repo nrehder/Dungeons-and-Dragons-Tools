@@ -4,11 +4,14 @@
 	padding-top: 10px;
 }
 .background-app .controls {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 	width: 80%;
 	margin: auto;
 }
 @media (max-width: 600px) {
 	.background-app .controls {
-		width: 90%;
+		width: 100%;
 	}
 }

@@ -1,4 +1,7 @@
 import React from "react";
+
+import TableHeader from "../tableLayout/tableHeader";
+
 import NonHuman from "./nonHuman";
 import Parents from "./parents";
 import Birthplace from "./birthplace";
@@ -9,8 +12,9 @@ import ChildhoodMemories from "./family/childhoodMemories";
 
 const Origins = props => {
 	return (
-		<div>
+		<div className="w-80 table-margin">
 			<h1>Origins</h1>
+			<TableHeader />
 			<Parents />
 			{props.race !== "Other" ? <NonHuman race={props.race} /> : null}
 			<Birthplace />

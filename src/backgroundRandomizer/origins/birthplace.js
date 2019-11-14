@@ -1,65 +1,61 @@
 import React from "react";
 import rollDice from "../../diceRoller";
 import jsonData from "./origins.json";
+import TableRow from "../tableLayout/tableRow";
 
 const Birthplace = () => {
 	let roll = rollDice(1, 100);
 	let result;
 
 	if (roll < 51) {
-		result = 1;
+		result = jsonData["Birthplace"][1];
 	} else if (roll < 56) {
-		result = 2;
+		result = jsonData["Birthplace"][2];
 	} else if (roll < 64) {
-		result = 3;
+		result = jsonData["Birthplace"][3];
 	} else if (roll < 66) {
-		result = 4;
+		result = jsonData["Birthplace"][4];
 	} else if (roll < 69) {
-		result = 5;
+		result = jsonData["Birthplace"][5];
 	} else if (roll < 71) {
-		result = 6;
+		result = jsonData["Birthplace"][6];
 	} else if (roll < 73) {
-		result = 7;
+		result = jsonData["Birthplace"][7];
 	} else if (roll < 75) {
-		result = 8;
+		result = jsonData["Birthplace"][8];
 	} else if (roll < 78) {
-		result = 9;
+		result = jsonData["Birthplace"][9];
 	} else if (roll < 79) {
-		result = 10;
+		result = jsonData["Birthplace"][10];
 	} else if (roll < 81) {
-		result = 11;
+		result = jsonData["Birthplace"][11];
 	} else if (roll < 83) {
-		result = 12;
+		result = jsonData["Birthplace"][12];
 	} else if (roll < 85) {
-		result = 13;
+		result = jsonData["Birthplace"][13];
 	} else if (roll < 86) {
-		result = 14;
+		result = jsonData["Birthplace"][14];
 	} else if (roll < 89) {
-		result = 15;
+		result = jsonData["Birthplace"][15];
 	} else if (roll < 92) {
-		result = 16;
+		result = jsonData["Birthplace"][16];
 	} else if (roll < 94) {
-		result = 17;
+		result = jsonData["Birthplace"][17];
 	} else if (roll < 96) {
-		result = 18;
+		result = jsonData["Birthplace"][18];
 	} else if (roll < 97) {
-		result = 19;
+		result = jsonData["Birthplace"][19];
 	} else if (roll < 98) {
-		result = 20;
+		result = jsonData["Birthplace"][20];
 	} else if (roll < 99) {
-		result = 21;
+		result = jsonData["Birthplace"][21];
 	} else if (roll < 100) {
-		result = 22;
+		result = jsonData["Birthplace"][22];
 	} else {
-		result = 23;
+		result = jsonData["Birthplace"][23];
 	}
 
-	return [
-		<h3 key="birthplace_title">Birthplace:</h3>,
-		<p key="birthplace_result">
-			{roll}: {jsonData["Birthplace"][result]}
-		</p>,
-	];
+	return <TableRow category="Birthplace" roll={roll} result={result} />;
 };
 
 export default Birthplace;

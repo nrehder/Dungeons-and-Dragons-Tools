@@ -42,3 +42,30 @@
 	color: #dfdfdf;
 	text-align: center;
 }
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0;
+}
+.col {
+	flex-basis: 0;
+	flex-grow: 1;
+	width: 100%;
+	padding: 0 15px;
+	position: relative;
+}
+.w-80 {
+	width: 80%;
+	margin: auto;
+}
+.table-margin,
+.table-margin p,
+.table-margin h3 {
+	margin: 5px auto;
+}
+@media (max-width: 600px) {
+	.w-80 {
+		width: 100%;
+	}
+}

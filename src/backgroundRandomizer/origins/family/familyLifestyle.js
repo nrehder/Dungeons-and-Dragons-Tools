@@ -2,6 +2,7 @@ import React from "react";
 import rollDice from "../../../diceRoller";
 import ChildhoodHome from "./childhoodHome";
 import jsonData from "../origins.json";
+import TableRow from "../../tableLayout/tableRow";
 
 const FamilyLifestyle = () => {
 	const roll = rollDice(3, 6);
@@ -23,10 +24,12 @@ const FamilyLifestyle = () => {
 	}
 
 	return [
-		<h3 key="family_lifestyle">Family Lifestyle:</h3>,
-		<p key="family_lifestyle_text">
-			{roll}: {jsonData["Family_Lifestyle"][mod]}
-		</p>,
+		<TableRow
+			key="family_lifestyle"
+			category="Family Lifestyle"
+			roll={roll}
+			result={jsonData["Family_Lifestyle"][mod]}
+		/>,
 		<ChildhoodHome key="childhood_home" mod={mod} />,
 	];
 };
