@@ -69,3 +69,28 @@
 		width: 100%;
 	}
 }
+
+.card-wrapper {
+	width: 80%;
+	margin: 10px auto;
+	text-align: center;
+	background-color: slategrey;
+	border-radius: 10px;
+	border: 2px solid black;
+	padding: 0;
+}
+
+.card-header {
+	margin: 0;
+	padding: 10px 0;
+	background-color: black;
+	border-radius: 5px;
+}
+.card-header h1 {
+	margin: 0;
+	-webkit-user-select: none;
+}
+
+.card-content {
+	margin: 10px 0;
+}

@@ -1,26 +1,24 @@
 import React from "react";
-import rollDice from "../../diceRoller";
 import jsonData from "./lifeEvents.json";
 import TableRow from "../tableLayout/tableRow";
 
 const LifeEvent = props => {
-	const roll = rollDice(1, 100);
 	let result;
-	if (roll < 51) {
-		result = jsonData["Life_Events"][Math.ceil(roll / 10)];
-	} else if (roll < 71) {
+	if (props.roll < 51) {
+		result = jsonData["Life_Events"][Math.ceil(props.roll / 10)];
+	} else if (props.roll < 71) {
 		result = jsonData["Life_Events"][6];
-	} else if (roll < 76) {
+	} else if (props.roll < 76) {
 		result = jsonData["Life_Events"][7];
-	} else if (roll < 81) {
+	} else if (props.roll < 81) {
 		result = jsonData["Life_Events"][8];
-	} else if (roll < 86) {
+	} else if (props.roll < 86) {
 		result = jsonData["Life_Events"][9];
-	} else if (roll < 91) {
+	} else if (props.roll < 91) {
 		result = jsonData["Life_Events"][10];
-	} else if (roll < 96) {
+	} else if (props.roll < 96) {
 		result = jsonData["Life_Events"][11];
-	} else if (roll < 100) {
+	} else if (props.roll < 100) {
 		result = jsonData["Life_Events"][12];
 	} else {
 		result = jsonData["Life_Events"][13];
@@ -28,7 +26,7 @@ const LifeEvent = props => {
 	return (
 		<TableRow
 			category={"Life Event " + (props.index + 1)}
-			roll={roll}
+			roll={props.roll}
 			result={result}
 		/>
 	);

@@ -1,15 +1,14 @@
 import React from "react";
-import rollDice from "../../diceRoller";
+
 import jsonData from "./origins.json";
 import TableRow from "../tableLayout/tableRow";
 
-const Sibling = () => {
-	let roll = rollDice(1, 5);
+const Sibling = props => {
 	return (
 		<TableRow
 			category="Siblings"
-			roll={roll}
-			result={jsonData["Siblings"][roll]}
+			roll={props.roll}
+			result={jsonData["Siblings"][props.roll]}
 		/>
 	);
 };

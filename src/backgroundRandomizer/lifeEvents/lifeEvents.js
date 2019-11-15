@@ -1,5 +1,7 @@
 import React from "react";
-import rollDice from "../../diceRoller";
+
+import { connect } from "react-redux";
+
 import LifeEvent from "./lifeEvent";
 import Adventures from "./secondaryTables/adventures";
 import ArcaneMatters from "./secondaryTables/arcaneMatters";
@@ -12,29 +14,13 @@ import Punishment from "./secondaryTables/punishment";
 import SupernaturalEvents from "./secondaryTables/supernaturalEvents";
 import TableHeader from "../tableLayout/tableHeader";
 
-const eventsDice = age => {
-	if (age > 60) {
-		return 12;
-	} else if (age > 50) {
-		return 10;
-	} else if (age > 40) {
-		return 8;
-	} else if (age > 30) {
-		return 6;
-	} else if (age > 20) {
-		return 4;
-	} else {
-		return 1;
-	}
-};
-
 const LifeEvents = props => {
-	const numEvents = rollDice(1, eventsDice(props.age));
-
 	const eventsResults = [];
 
-	for (let i = 0; i < numEvents; i++) {
-		eventsResults.push(<LifeEvent key={i} index={i} />);
+	for (let i = 0; i < props.eventRolls.length; i++) {
+		eventsResults.push(
+			<LifeEvent key={i} index={i} roll={props.eventRolls[i]} />
+		);
 	}
 	return (
 		<div className="w-80 table-margin">
@@ -54,4 +40,10 @@ const LifeEvents = props => {
 	);
 };
 
-export default LifeEvents;
+const mapStateToProps = state => {
+	return {
+		eventRolls: state.lifeEventRolls,
+	};
+};
+
+export default connect(mapStateToProps)(LifeEvents);

@@ -1,11 +1,11 @@
 import React from "react";
-import rollDice from "../../diceRoller";
+
 import AbsentParent from "./family/absentParent";
 import jsonData from "./origins.json";
 import TableRow from "../tableLayout/tableRow";
 
-const Family = () => {
-	const roll = rollDice(1, 100);
+const Family = props => {
+	const roll = props.familyRoll;
 	let result;
 
 	if (roll > 75) {
@@ -33,7 +33,13 @@ const Family = () => {
 	];
 
 	if (roll < 76)
-		familyResult.push(<AbsentParent key="absent_parent_container" />);
+		familyResult.push(
+			<AbsentParent
+				absentRoll={props.absentParentRoll}
+				deadRoll={props.deadParentRoll}
+				key="absent_parent_container"
+			/>
+		);
 
 	return familyResult;
 };

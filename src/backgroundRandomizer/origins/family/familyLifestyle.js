@@ -1,23 +1,22 @@
 import React from "react";
-import rollDice from "../../../diceRoller";
+
 import ChildhoodHome from "./childhoodHome";
 import jsonData from "../origins.json";
 import TableRow from "../../tableLayout/tableRow";
 
-const FamilyLifestyle = () => {
-	const roll = rollDice(3, 6);
+const FamilyLifestyle = props => {
 	let mod;
-	if (roll === 18) {
+	if (props.familyLifeRoll === 18) {
 		mod = 40;
-	} else if (roll > 15) {
+	} else if (props.familyLifeRoll > 15) {
 		mod = 20;
-	} else if (roll > 12) {
+	} else if (props.familyLifeRoll > 12) {
 		mod = 10;
-	} else if (roll > 8) {
+	} else if (props.familyLifeRoll > 8) {
 		mod = 0;
-	} else if (roll > 5) {
+	} else if (props.familyLifeRoll > 5) {
 		mod = -10;
-	} else if (roll > 3) {
+	} else if (props.familyLifeRoll > 3) {
 		mod = -20;
 	} else {
 		mod = -40;
@@ -27,10 +26,10 @@ const FamilyLifestyle = () => {
 		<TableRow
 			key="family_lifestyle"
 			category="Family Lifestyle"
-			roll={roll}
+			roll={props.familyLifeRoll}
 			result={jsonData["Family_Lifestyle"][mod]}
 		/>,
-		<ChildhoodHome key="childhood_home" mod={mod} />,
+		<ChildhoodHome key="childhood_home" roll={props.childHomeRoll + mod} />,
 	];
 };
 

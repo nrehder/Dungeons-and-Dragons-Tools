@@ -1,36 +1,46 @@
 import React from "react";
 
+import { connect } from "react-redux";
+
 import TableHeader from "../tableLayout/tableHeader";
 import TableRow from "../tableLayout/tableRow";
 
-import rollDice from "../../diceRoller";
 import jsonData from "./personalDecisions.json";
 
 const PersonalDecisions = props => {
-	const charBackRoll = rollDice(1, 6);
-	const classRoll = rollDice(1, 6);
 	return (
 		<div className="w-80 table-margin">
 			<h1>Personal Decisions</h1>
 			<TableHeader />
 			<TableRow
 				category="Character Background"
-				roll={charBackRoll}
+				roll={props.charBackRoll}
 				result={
-					jsonData["Character_Background"][props.background][
-						charBackRoll
+					jsonData["Character_Background"][props.charBack][
+						props.charBackRoll
 					]
 				}
 			/>
 			<TableRow
 				category="Class Training"
-				roll={classRoll}
+				roll={props.charClassRoll}
 				result={
-					jsonData["Character_Class"][props.characterClass][classRoll]
+					jsonData["Character_Class"][props.charClass][
+						props.charClassRoll
+					]
 				}
 			/>
 		</div>
 	);
 };
 
-export default PersonalDecisions;
+const mapStateToProps = state => {
+	return {
+		charBack: state.background,
+		charClass: state.class,
+		charBackRoll: state.personalRolls.charBackRoll,
+		charClassRoll: state.personalRolls.charClassRoll,
+	};
+};
+
+export default connect(mapStateToProps)(PersonalDecisions);

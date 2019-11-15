@@ -1,12 +1,10 @@
 import React from "react";
-import rollDice from "../../../diceRoller";
+
 import jsonData from "../origins.json";
 import TableRow from "../../tableLayout/tableRow";
 
 const ChildhoodMemories = props => {
-	const roll = rollDice(3, 6);
-
-	const modifiedRoll = roll + +props.chaMod;
+	const modifiedRoll = props.roll + +props.chaMod;
 	let result;
 	if (modifiedRoll > 17) {
 		result = jsonData["Childhood_Memories"][7];
@@ -24,7 +22,11 @@ const ChildhoodMemories = props => {
 		result = jsonData["Childhood_Memories"][1];
 	}
 	return (
-		<TableRow category="Childhood Memories" roll={roll} result={result} />
+		<TableRow
+			category="Childhood Memories"
+			roll={props.roll}
+			result={result}
+		/>
 	);
 };
 

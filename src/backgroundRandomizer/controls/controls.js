@@ -41,7 +41,9 @@ const Controls = props => {
 				<Control
 					control="race"
 					value={props.values.race}
-					changeHandler={props.changeHandler}
+					changeHandler={event =>
+						props.changeHandler(event, "CHANGE_RACE")
+					}
 					controlList={raceList}
 				/>
 			</div>
@@ -50,7 +52,9 @@ const Controls = props => {
 				<Control
 					control="background"
 					value={props.values.background}
-					changeHandler={props.changeHandler}
+					changeHandler={event =>
+						props.changeHandler(event, "CHANGE_BACKGROUND")
+					}
 					controlList={backgroundList}
 				/>
 			</div>
@@ -59,7 +63,9 @@ const Controls = props => {
 				<Control
 					control="class"
 					value={props.values.class}
-					changeHandler={props.changeHandler}
+					changeHandler={event =>
+						props.changeHandler(event, "CHANGE_CLASS")
+					}
 					controlList={classList}
 				/>
 			</div>
@@ -70,7 +76,7 @@ const Controls = props => {
 					min="1"
 					value={props.values.age}
 					onChange={event => {
-						props.changeHandler(event, "age");
+						props.changeHandler(event, "CHANGE_AGE");
 					}}
 				/>
 			</div>
@@ -80,9 +86,14 @@ const Controls = props => {
 					type="number"
 					value={props.values.chaMod}
 					onChange={event => {
-						props.changeHandler(event, "chaMod");
+						props.changeHandler(event, "CHANGE_CHAMOD");
 					}}
 				/>
+			</div>
+			<div>
+				<button type="button" onClick={props.randomizer}>
+					{props.buttonType}
+				</button>
 			</div>
 		</div>
 	);
