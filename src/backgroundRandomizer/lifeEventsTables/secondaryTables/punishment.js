@@ -1,34 +1,34 @@
 import React from "react";
 import rollDice from "../../../diceRoller";
-import jsonData from "../lifeEvents.json";
+import jsonData from "./secondary.json";
 
-class SupernaturalEvents extends React.Component {
+class Punishment extends React.Component {
 	state = {
 		roll: 0,
 		text: "",
 	};
 
 	rollAgain = () => {
-		const roll = rollDice(1, 100);
+		const roll = rollDice(1, 12);
 		let result;
-		if (roll < 21) {
-			result = Math.ceil(roll / 5);
-		} else if (roll < 71) {
-			result = Math.ceil(roll / 10) + 2;
+		if (roll < 7) {
+			result = Math.ceil(roll / 3);
+		} else if (roll < 9) {
+			result = 3;
 		} else {
-			result = Math.ceil(roll / 5) - 5;
+			result = 4;
 		}
 
 		this.setState({
 			roll,
-			text: jsonData["Supernatural_Events"][result],
+			text: jsonData["Punishment"][result],
 		});
 	};
 
 	render() {
 		return (
 			<div>
-				<h3>Supernatural Events Randomizer:</h3>
+				<h3>Punishment Randomizer:</h3>
 				<button onClick={this.rollAgain}>Randomize</button>
 				{this.state.roll > 0 ? (
 					<p>
@@ -40,4 +40,4 @@ class SupernaturalEvents extends React.Component {
 	}
 }
 
-export default SupernaturalEvents;
+export default Punishment;

@@ -1,6 +1,6 @@
 import React from "react";
 import rollDice from "../../../diceRoller";
-import jsonData from "../lifeEvents.json";
+import jsonData from "./secondary.json";
 
 class War extends React.Component {
 	state = {

@@ -1,26 +1,26 @@
 import React from "react";
 import rollDice from "../../../diceRoller";
-import jsonData from "../lifeEvents.json";
+import jsonData from "./secondary.json";
 
-class Crime extends React.Component {
+class Boons extends React.Component {
 	state = {
 		roll: 0,
 		text: "",
 	};
 
 	rollAgain = () => {
-		const roll = rollDice(1, 8);
+		const roll = rollDice(1, 10);
 
 		this.setState({
 			roll,
-			text: jsonData["Crime"][roll],
+			text: jsonData["Boons"][roll],
 		});
 	};
 
 	render() {
 		return (
 			<div>
-				<h3>Crime Randomizer:</h3>
+				<h3>Boons Randomizer:</h3>
 				<button onClick={this.rollAgain}>Randomize</button>
 				{this.state.roll > 0 ? (
 					<p>
@@ -32,4 +32,4 @@ class Crime extends React.Component {
 	}
 }
 
-export default Crime;
+export default Boons;

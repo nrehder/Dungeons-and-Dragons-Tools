@@ -1,34 +1,26 @@
 import React from "react";
 import rollDice from "../../../diceRoller";
-import jsonData from "../lifeEvents.json";
+import jsonData from "./secondary.json";
 
-class Adventures extends React.Component {
+class Tragedies extends React.Component {
 	state = {
 		roll: 0,
 		text: "",
 	};
 
 	rollAgain = () => {
-		const roll = rollDice(1, 100);
-		let result;
-		if (roll < 91) {
-			result = Math.ceil(roll / 10);
-		} else if (roll !== 100) {
-			result = 10;
-		} else {
-			result = 11;
-		}
+		const roll = rollDice(1, 10);
 
 		this.setState({
 			roll,
-			text: jsonData["Adventures"][result],
+			text: jsonData["Tragedies"][roll],
 		});
 	};
 
 	render() {
 		return (
 			<div>
-				<h3>Adventure Randomizer:</h3>
+				<h3>Tragedies Randomizer:</h3>
 				<button onClick={this.rollAgain}>Randomize</button>
 				{this.state.roll > 0 ? (
 					<p>
@@ -40,4 +32,4 @@ class Adventures extends React.Component {
 	}
 }
 
-export default Adventures;
+export default Tragedies;

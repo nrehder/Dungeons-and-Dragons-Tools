@@ -12,61 +12,43 @@ import Family from "./family";
 import FamilyLifestyle from "./family/familyLifestyle";
 import ChildhoodMemories from "./family/childhoodMemories";
 
-class Origins extends React.Component {
-	state = {
-		viewContent: true,
-	};
-
-	contentViewToggler = () => {
-		this.setState({ viewContent: !this.state.viewContent });
-	};
-
-	render() {
-		let content = null;
-		if (this.state.viewContent) {
-			content = (
-				<div className="card-content">
-					<TableHeader />
-					<Parents roll={this.props.parentsRoll} />
-					{this.props.race !== "Other" ? (
-						<NonHuman
-							roll={this.props.nonHumanRoll}
-							race={this.props.race}
-						/>
-					) : null}
-					<Birthplace roll={this.props.birthplaceRoll} />
-					<Sibling roll={this.props.siblingRoll} />
-					<Family
-						familyRoll={this.props.familyRoll}
-						absentParentRoll={this.props.absentParentRoll}
-						deadParentRoll={this.props.deadParentRoll}
-					/>
-					<FamilyLifestyle
-						familyLifeRoll={this.props.familyLifeRoll}
-						childHomeRoll={this.props.childHomeRoll}
-					/>
-					<ChildhoodMemories
-						roll={this.props.childMemoriesRoll}
-						chaMod={this.props.chaMod}
-					/>
-				</div>
-			);
-		}
-		return (
-			<div className="w-80 table-margin">
-				<div className="card-wrapper">
-					<div
-						className="card-header"
-						onClick={this.contentViewToggler}
-					>
-						<h1>Origins</h1>
-					</div>
-					{content}
-				</div>
+const Origins = props => {
+	let content = null;
+	if (props.view) {
+		content = (
+			<div className="card-content">
+				<TableHeader />
+				<Parents roll={props.parentsRoll} />
+				{props.race !== "Other" ? (
+					<NonHuman roll={props.nonHumanRoll} race={props.race} />
+				) : null}
+				<Birthplace roll={props.birthplaceRoll} />
+				<Sibling roll={props.siblingRoll} />
+				<Family
+					familyRoll={props.familyRoll}
+					absentParentRoll={props.absentParentRoll}
+					deadParentRoll={props.deadParentRoll}
+				/>
+				<FamilyLifestyle
+					familyLifeRoll={props.familyLifeRoll}
+					childHomeRoll={props.childHomeRoll}
+				/>
+				<ChildhoodMemories
+					roll={props.childMemoriesRoll}
+					chaMod={props.chaMod}
+				/>
 			</div>
 		);
 	}
-}
+	return (
+		<div className="w-80 table-margin card-wrapper">
+			<div className="card-header" onClick={props.click}>
+				<h1>Origins</h1>
+			</div>
+			{content}
+		</div>
+	);
+};
 
 const mapStateToProps = state => {
 	return {

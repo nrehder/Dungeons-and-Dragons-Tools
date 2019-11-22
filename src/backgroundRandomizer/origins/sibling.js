@@ -8,7 +8,7 @@ const Sibling = props => {
 		<TableRow
 			category="Siblings"
 			roll={props.roll}
-			result={jsonData["Siblings"][props.roll]}
+			result={jsonData["Siblings"][Math.ceil(props.roll / 2)]}
 		/>
 	);
 };

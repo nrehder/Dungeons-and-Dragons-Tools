@@ -29,7 +29,11 @@ const FamilyLifestyle = props => {
 			roll={props.familyLifeRoll}
 			result={jsonData["Family_Lifestyle"][mod]}
 		/>,
-		<ChildhoodHome key="childhood_home" roll={props.childHomeRoll + mod} />,
+		<ChildhoodHome
+			key="childhood_home"
+			roll={props.childHomeRoll}
+			mod={mod}
+		/>,
 	];
 };
 

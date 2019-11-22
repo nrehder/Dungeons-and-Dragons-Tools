@@ -30,7 +30,7 @@ const rerollOrigins = () => {
 		parentsRoll: rollDice(1, 100),
 		nonHumanRoll: rollDice(1, 8),
 		birthplaceRoll: rollDice(1, 100),
-		siblingRoll: rollDice(1, 5),
+		siblingRoll: rollDice(1, 10),
 		familyRoll: rollDice(1, 100),
 		absentParentRoll: rollDice(1, 4),
 		deadParentRoll: rollDice(1, 12),

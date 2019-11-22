@@ -8,15 +8,25 @@ import Origins from "./origins/origins";
 import PersonalDecisions from "./personalDecisions/personalDecisions";
 import LifeEvents from "./lifeEvents/lifeEvents";
 import SupplementalTables from "./supplementalTables/supplementalTables";
+import LifeEventsTables from "./lifeEventsTables/lifeEventsTables";
 
 class BackgroundRandomizer extends React.Component {
 	state = {
 		beenSubmitted: false,
+		lifeEventsTables: false,
+		supplementalTables: false,
+		originsTables: true,
+		personalTables: true,
+		lifeTables: true,
 	};
 
 	buttonClick = () => {
 		this.props.reroll();
 		if (!this.state.beenSubmitted) this.setState({ beenSubmitted: true });
+	};
+
+	toggleViews = key => {
+		this.setState({ [key]: !this.state[key] });
 	};
 
 	render() {
@@ -35,13 +45,50 @@ class BackgroundRandomizer extends React.Component {
 		);
 		if (this.state.beenSubmitted) {
 			display = [
-				<Origins key="origins_comp" />,
+				<Origins
+					key="origins_comp"
+					click={() => this.toggleViews("originsTables")}
+					view={this.state.originsTables}
+				/>,
 				<hr key="break_one" />,
-				<PersonalDecisions key="personal_decisions_comp" />,
+				<PersonalDecisions
+					key="personal_decisions_comp"
+					click={() => this.toggleViews("personalTables")}
+					view={this.state.personalTables}
+				/>,
 				<hr key="break_two" />,
-				<LifeEvents key="life_events_comp" />,
+				<LifeEvents
+					key="life_events_comp"
+					click={() => this.toggleViews("lifeTables")}
+					view={this.state.lifeTables}
+				/>,
 				<hr key="break_three" />,
-				<SupplementalTables key="supplemental_tables_comp" />,
+				<div
+					className="w-80 card-wrapper"
+					key="life_events_tables_comp"
+				>
+					<div
+						className="card-header"
+						onClick={() => this.toggleViews("lifeEventsTables")}
+					>
+						<h1>Life Events Extra Tables</h1>
+					</div>
+					{this.state.lifeEventsTables ? <LifeEventsTables /> : null}
+				</div>,
+				<div
+					className="w-80 card-wrapper"
+					key="supplemental_tables_comp"
+				>
+					<div
+						className="card-header"
+						onClick={() => this.toggleViews("supplementalTables")}
+					>
+						<h1>Supplemental Tables</h1>
+					</div>
+					{this.state.supplementalTables ? (
+						<SupplementalTables />
+					) : null}
+				</div>,
 			];
 		}
 		return (

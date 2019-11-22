@@ -9,8 +9,7 @@ import Alignment from "./alignment";
 
 const SupplementalTables = () => {
 	return (
-		<div>
-			<h1>Supplemental Tables</h1>
+		<div className="card-content">
 			<Alignment />
 			<CauseOfDeath />
 			<Class />
