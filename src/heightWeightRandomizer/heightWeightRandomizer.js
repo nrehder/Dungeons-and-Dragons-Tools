@@ -56,7 +56,7 @@ class HeightWeightRandomizer extends React.Component {
 		this.setState({
 			race: raceChoice,
 			height: baseHeight + heightMod,
-			weight: baseWeight + weightMod,
+			weight: baseWeight + heightMod * weightMod,
 		});
 	};
 
