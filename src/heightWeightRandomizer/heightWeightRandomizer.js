@@ -5,7 +5,7 @@ import rollDice from "../diceRoller";
 
 class HeightWeightRandomizer extends React.Component {
 	state = {
-		race: "",
+		race: "Human",
 		height: 0,
 		weight: 0,
 		measIndex: 0,
@@ -37,8 +37,12 @@ class HeightWeightRandomizer extends React.Component {
 		});
 	};
 
-	onChangeRace = event => {
-		const racialRandomizers = jsonData[event.target.value];
+	onGenerate = event => {
+		const raceChoice = event.target.value
+			? event.target.value
+			: this.state.race;
+
+		const racialRandomizers = jsonData[raceChoice];
 		const baseHeight = racialRandomizers["baseHeight"];
 		const heightMod = rollDice(
 			racialRandomizers["heightNumDice"],
@@ -50,7 +54,7 @@ class HeightWeightRandomizer extends React.Component {
 			racialRandomizers["weightMaxDice"]
 		);
 		this.setState({
-			race: event.target.value,
+			race: raceChoice,
 			height: baseHeight + heightMod,
 			weight: baseWeight + weightMod,
 		});
@@ -72,10 +76,7 @@ class HeightWeightRandomizer extends React.Component {
 			<div className="height-weight">
 				<div className="race-selector">
 					<span>Choose Race: </span>
-					<select
-						value={this.state.race}
-						onChange={this.onChangeRace}
-					>
+					<select value={this.state.race} onChange={this.onGenerate}>
 						{this.raceList.map(ele => (
 							<option value={ele} key={ele}>
 								{ele}
@@ -84,7 +85,7 @@ class HeightWeightRandomizer extends React.Component {
 					</select>
 				</div>
 				<div>
-					<button>Generate</button>
+					<button onClick={this.onGenerate}>Generate</button>
 				</div>
 				<div>
 					<span>Click to change measurement: </span>
